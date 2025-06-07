@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.admin.show_time.AddShowTimeFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <include
+            android:id="@+id/toolbar_add_show_time"
+            layout="@layout/layout_common_toolbar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_choose_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="20dp"
+            android:text="Chọn phim"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_add_show_time" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/input_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_edittext_input_form"
+            android:paddingVertical="8dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/text_choose_movies"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/input_movie"
+            app:layout_constraintEnd_toEndOf="@id/input_movie"
+            app:layout_constraintTop_toTopOf="@+id/input_movie"
+            app:srcCompat="@drawable/ic_arrow_drop_down_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_release_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="Chọn ngày chiếu"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_50"
+            app:layout_constraintTop_toBottomOf="@+id/input_movie" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_release_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edittext_input_form"
+            android:hint="dd/mm/yyyy"
+            android:paddingVertical="10dp"
+            android:paddingStart="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_grey_stroke_bold"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/text_release_date"
+            app:layout_constraintStart_toStartOf="@id/text_release_date"
+            app:layout_constraintTop_toBottomOf="@id/text_release_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="Chọn giờ chiếu"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_movie" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_edittext_input_form"
+            android:hint="00:00"
+            android:paddingVertical="10dp"
+            android:paddingStart="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_grey_stroke_bold"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/text_time"
+            app:layout_constraintStart_toStartOf="@id/text_time"
+            app:layout_constraintTop_toBottomOf="@id/text_time" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_choose_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="20dp"
+            android:text="Chọn phòng chiếu"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_time" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/input_choose_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_edittext_input_form"
+            android:paddingVertical="8dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/text_choose_room"
+            tools:ignore="RtlSymmetry" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_arrow_down_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/input_choose_room"
+            app:layout_constraintEnd_toEndOf="@id/input_choose_room"
+            app:layout_constraintTop_toTopOf="@+id/input_choose_room"
+            app:srcCompat="@drawable/ic_arrow_drop_down_24" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save_show_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_button_sign_in"
+            android:text="Lưu"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

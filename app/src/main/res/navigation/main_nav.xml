@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.baseappandroid.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminPanelFragment"
+            app:destination="@id/adminPanelFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.baseappandroid.ui.splash_sreen.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.baseappandroid.ui.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.baseappandroid.ui.register.RegisterFragment"
+        android:label="RegisterFragment">
+
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="com.example.baseappandroid.ui.admin.AdminPanelFragment"
+        android:label="AdminPanelFragment">
+        <action
+            android:id="@+id/action_adminPanelFragment_to_movieManagementFragment"
+            app:destination="@id/movieManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_roomManagementFragment"
+            app:destination="@id/roomManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_showTimeManagementFragment"
+            app:destination="@id/showTimeManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_ticketManagementFragment"
+            app:destination="@id/ticketManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_statisticFragment"
+            app:destination="@id/statisticFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_snackManagementFragment"
+            app:destination="@id/snackManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/adminPanelFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/movieManagementFragment"
+        android:name="com.example.baseappandroid.ui.admin.movie.MovieManagementFragment"
+        android:label="MovieManagementFragment">
+        <action
+            android:id="@+id/action_movieManagementFragment_to_addNewAndEditMovieFragment"
+            app:destination="@id/addNewAndEditMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewAndEditMovieFragment"
+        android:name="com.example.baseappandroid.ui.admin.movie.AddNewAndEditMovieFragment"
+        android:label="AddNewAndEditMovieFragment">
+        <argument
+            android:name="fromScreen"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="movieId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomManagementFragment"
+        android:name="com.example.baseappandroid.ui.admin.room.RoomManagementFragment"
+        android:label="RoomManagementFragment">
+        <action
+            android:id="@+id/action_roomManagementFragment_to_addRoomBottomFragment"
+            app:destination="@id/addRoomBottomFragment" />
+        <action
+            android:id="@+id/action_roomManagementFragment_to_editRoomFragment"
+            app:destination="@id/editRoomFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addRoomBottomFragment"
+        android:name="com.example.baseappandroid.ui.admin.room.AddRoomBottomFragment"
+        android:label="AddRoomBottomFragment" />
+    <fragment
+        android:id="@+id/editRoomFragment"
+        android:name="com.example.baseappandroid.ui.admin.room.EditRoomFragment"
+        android:label="EditRoomFragment">
+        <argument
+            android:name="roomID"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="roomName"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="roomSeats"
+            app:argType="long"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/showTimeManagementFragment"
+        android:name="com.example.baseappandroid.ui.admin.show_time.ShowTimeManagementFragment"
+        android:label="ShowTimeManagementFragment">
+        <action
+            android:id="@+id/action_showTimeManagementFragment_to_addShowTimeFragment"
+            app:destination="@id/addShowTimeFragment" />
+        <action
+            android:id="@+id/action_showTimeManagementFragment_to_editShowTimeFragment"
+            app:destination="@id/editShowTimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShowTimeFragment"
+        android:name="com.example.baseappandroid.ui.admin.show_time.AddShowTimeFragment"
+        android:label="AddShowTimeFragment" />
+    <dialog
+        android:id="@+id/editShowTimeFragment"
+        android:name="com.example.baseappandroid.ui.admin.show_time.EditShowTimeFragment"
+        android:label="EditShowTimeFragment">
+        <argument
+            android:name="movieTime"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="movieId"
+            app:argType="string"
+            app:nullable="false" />
+    </dialog>
+    <fragment
+        android:id="@+id/ticketManagementFragment"
+        android:name="com.example.baseappandroid.ui.admin.ticket.TicketManagementFragment"
+        android:label="TicketManagementFragment">
+        <action
+            android:id="@+id/action_ticketManagementFragment_to_adminDetailTicketFragment"
+            app:destination="@id/adminDetailTicketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDetailTicketFragment"
+        android:name="com.example.baseappandroid.ui.admin.ticket.AdminDetailTicketFragment"
+        android:label="AdminDetailTicketFragment">
+
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticFragment"
+        android:name="com.example.baseappandroid.ui.admin.statistic.StatisticFragment"
+        android:label="StatisticFragment" />
+    <fragment
+        android:id="@+id/snackManagementFragment"
+        android:name="com.example.baseappandroid.ui.admin.snack.SnackManagementFragment"
+        android:label="SnackManagementFragment">
+        <action
+            android:id="@+id/action_snackManagementFragment_to_addSnackFragment"
+            app:destination="@id/addSnackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSnackFragment"
+        android:name="com.example.baseappandroid.ui.admin.snack.AddSnackFragment"
+        android:label="AddSnackFragment">
+        <argument
+            android:name="editType"
+            app:argType="com.example.baseappandroid.utils.AdminToAddEditSnackScreenType"
+            app:nullable="false" />
+        <argument
+            android:name="snackId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

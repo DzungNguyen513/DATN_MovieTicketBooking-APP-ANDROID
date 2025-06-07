@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        tools:context=".ui.home.profile.ProfileFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Tài khoản"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Thông tin tài khoản"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_account" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_grey_stroke"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_info" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_change_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Đổi mật khẩu"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_grey_stroke"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_change_password" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_support"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Hỗ trợ"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_hotline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Hotline - "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_support" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_hotline_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:autoLink="phone"
+                android:text="08888888888"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/text_profile_hotline"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_support" />
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_grey_stroke"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_hotline" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_setting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Cài đặt"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/view_3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_usage_term"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Điều khoản sử dụng"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_setting" />
+
+            <View
+                android:id="@+id/view_4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_grey_stroke"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_usage_term" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_developer_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Thông tin sử dụng"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/view_4" />
+
+            <View
+                android:id="@+id/view_5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_grey_stroke"
+                app:layout_constraintTop_toBottomOf="@id/text_profile_developer_info" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_profile_logout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Đăng xuất"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/text_profile_account"
+                app:layout_constraintTop_toBottomOf="@id/view_5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

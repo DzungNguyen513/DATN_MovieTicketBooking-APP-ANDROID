@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainHomeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/weeklyMovieFragment"
+        android:icon="@drawable/ic_calendar"
+        android:title="Lịch chiếu" />
+    <item
+        android:id="@+id/movieHistoryFragment"
+        android:icon="@drawable/ic_history"
+        android:title="Lịch sử" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_user"
+        android:title="Cá nhân" />
+</menu>

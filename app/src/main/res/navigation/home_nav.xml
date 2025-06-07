@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/mainHomeFragment">
+
+    <fragment
+        android:id="@+id/mainHomeFragment"
+        android:name="com.example.baseappandroid.ui.home.main_home.MainHomeFragment"
+        android:label="fragment_main_home"
+        tools:layout="@layout/fragment_main_home">
+        <action
+            android:id="@+id/action_mainHomeFragment_to_searchMovieFragment"
+            app:destination="@id/searchMovieFragment" />
+        <action
+            android:id="@+id/action_mainHomeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchMovieFragment"
+        android:name="com.example.baseappandroid.ui.home.search.SearchMovieFragment"
+        android:label="SearchMovieFragment">
+        <action
+            android:id="@+id/action_searchMovieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.baseappandroid.ui.home.movie_detail.MovieDetailFragment"
+        android:label="MovieDetailFragment">
+        <argument
+            android:name="movie_id"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_chooseDateAndTimeFragment"
+            app:destination="@id/chooseDateAndTimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookTicketFragment"
+        android:name="com.example.baseappandroid.ui.home.book_ticket.BookTicketFragment"
+        android:label="BookTicketFragment">
+        <argument
+            android:name="bookTicket"
+            app:argType="com.example.baseappandroid.data.model.arg.NavigateToBookTicketModel"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_bookTicketFragment_to_snackOrderFragment"
+            app:destination="@id/snackOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.baseappandroid.ui.home.payment.PaymentFragment"
+        android:label="PaymentFragment">
+        <argument
+            android:name="bookMovie"
+            app:argType="com.example.baseappandroid.data.model.BookTicketModel" />
+        <action
+            android:id="@+id/action_paymentFragment_to_paymentSuccessfulFragment"
+            app:destination="@id/paymentSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weeklyMovieFragment"
+        android:name="com.example.baseappandroid.ui.home.weekly_movie.WeeklyMovieFragment"
+        android:label="WeeklyMovieFragment">
+        <action
+            android:id="@+id/action_weeklyMovieFragment_to_bookTicketFragment"
+            app:destination="@id/bookTicketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSuccessfulFragment"
+        android:name="com.example.baseappandroid.ui.home.payment.PaymentSuccessfulFragment"
+        android:label="PaymentSuccessfulFragment">
+        <action
+            android:id="@+id/action_paymentSuccessfulFragment_to_mainHomeFragment"
+            app:destination="@id/mainHomeFragment" />
+        <argument
+            android:name="bill_id"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="from_screen"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieHistoryFragment"
+        android:name="com.example.baseappandroid.ui.home.history.MovieHistoryFragment"
+        android:label="MovieHistoryFragment">
+        <action
+            android:id="@+id/action_movieHistoryFragment_to_paymentSuccessfulFragment"
+            app:destination="@id/paymentSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.baseappandroid.ui.home.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_profileInformationFragment"
+            app:destination="@id/profileInformationFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseDateAndTimeFragment"
+        android:name="com.example.baseappandroid.ui.home.movie_detail.ChooseDateAndTimeFragment"
+        android:label="ChooseDateAndTimeFragment">
+        <action
+            android:id="@+id/action_chooseDateAndTimeFragment_to_bookTicketFragment"
+            app:destination="@id/bookTicketFragment" />
+        <argument
+            android:name="movieId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileInformationFragment"
+        android:name="com.example.baseappandroid.ui.home.profile.ProfileInformationFragment"
+        android:label="ProfileInformationFragment" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.baseappandroid.ui.home.profile.ChangePasswordFragment"
+        android:label="ChangePasswordFragment" />
+    <fragment
+        android:id="@+id/snackOrderFragment"
+        android:name="com.example.baseappandroid.ui.home.snack_order.SnackOrderFragment"
+        android:label="SnackOrderFragment">
+        <argument
+            android:name="bookMovie"
+            app:argType="com.example.baseappandroid.data.model.BookTicketModel" />
+        <action
+            android:id="@+id/action_snackOrderFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+</navigation>

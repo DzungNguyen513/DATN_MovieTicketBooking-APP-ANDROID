@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vn.zalopay.sdk" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="28" />
+
+    <queries>
+        <package android:name="vn.com.vng.zalopay.sb1" />
+        <package android:name="vn.com.vng.zalopay" />
+        <package android:name="com.zing.zalo" />
+    </queries>
+
+</manifest>

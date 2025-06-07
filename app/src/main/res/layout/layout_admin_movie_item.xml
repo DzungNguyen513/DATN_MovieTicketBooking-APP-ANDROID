@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_movie_type_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_movie_coming_soon"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_movie_admin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_movie_name_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/card_movie_coming_soon"
+            app:layout_constraintEnd_toEndOf="@id/guideline_admin_movie"
+            app:layout_constraintStart_toEndOf="@+id/card_movie_coming_soon"
+            app:layout_constraintTop_toTopOf="@id/card_movie_coming_soon"
+            app:layout_constraintVertical_bias="0.2"
+            tools:text="test movie name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_movie_category_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_grey_dark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/guideline_admin_movie"
+            app:layout_constraintStart_toStartOf="@id/text_movie_name_admin"
+            app:layout_constraintTop_toBottomOf="@+id/text_movie_name_admin"
+            tools:text="test movie name frstest movie name frstest movie name frstest movie name frsa" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_admin_movie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toStartOf="@id/guideline_admin_movie"
+            app:layout_constraintStart_toStartOf="@id/text_movie_category_admin"
+            app:layout_constraintTop_toBottomOf="@id/text_movie_category_admin">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_delete_movie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_sign_in"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingVertical="6dp"
+                android:text="Xoá"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_edit_movie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_sign_in"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingVertical="6dp"
+                android:text="Chỉnh sửa"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/button_delete_movie"
+                app:layout_constraintTop_toBottomOf="@id/text_movie_category_admin" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

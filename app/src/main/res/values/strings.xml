@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">UTCCinema</string>
+    <string name="hello_blank_fragment">Hello blank <fragme></fragme>nt</string>
+    <string name="text_null">null</string>
+    <string name="text_sign_in">Ứng dụng đặt vé UTC Cinema</string>
+    <string name="text_sign_in2">Đăng nhập</string>
+    <string name="text_sign_up">Đăng ký</string>
+    <string name="text_sign_in_subtitle">Đăng nhập với email và mật khẩu</string>
+    <string name="text_email">Email</string>
+    <string name="text_enter_email">Nhập địa chỉ email</string>
+    <string name="text_password">Mật khẩu</string>
+    <string name="text_password_repeat">Nhập lại mật khẩu</string>
+    <string name="text_enter_password">Nhập mật khẩu</string>
+    <string name="text_forget_password"><u>Quên mật khẩu</u></string>
+    <string name="text_sign_up_if_already_had_account"><font color="#3E3E3E">Không có tài khoản?</font> <font color="#FFBDD3"><b>Đăng ký ngay</b></font></string>
+    <string name="text_sign_in_if_already_had_account"><font color="#3E3E3E">Đã có tài khoản?</font> <font color="#FFBDD3"><b>Đăng nhập ngay</b></font></string>
+    <string name="text_create_new_account">Tạo tài khoản mới</string>
+    <string name="text_full_name">Họ và tên</string>
+    <string name="text_enter_full_name">Nhập họ và tên</string>
+    <string name="text_enter_mobile_phone">Nhập số điện thoại</string>
+    <string name="text_mobile_phone">Số điện thoại</string>
+    <string name="text_see_all">Xem tất cả</string>
+    <string name="text_error_try_again">Có lỗi xảy ra, vui lòng thử lại sau!</string>
+</resources>

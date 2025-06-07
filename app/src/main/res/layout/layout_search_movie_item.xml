@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_movie_search"
+            android:layout_width="140dp"
+            android:layout_height="160dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_movie_new"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/card_movie_search"
+            app:layout_constraintEnd_toEndOf="@id/card_movie_search"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="@id/card_movie_search"
+            app:layout_constraintTop_toTopOf="@id/card_movie_search"
+            app:layout_constraintVertical_bias="0.12">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_star_rating"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_star_yellow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_rating_movie_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/color_orange"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="5.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_movie_search_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card_movie_search"
+            app:layout_constraintTop_toTopOf="@id/card_movie_search"
+            app:layout_constraintVertical_bias="0.1"
+            tools:text="Spider-Man No Way.. " />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_release_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/text_movie_search_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_movie_search_name"
+            app:srcCompat="@drawable/ic_calendar_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_movie_release_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/color_grey_dark"
+            app:layout_constraintBottom_toBottomOf="@id/image_release_movie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_release_movie"
+            app:layout_constraintTop_toTopOf="@id/image_release_movie"
+            tools:text="2025" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_movie_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/image_release_movie"
+            app:layout_constraintTop_toBottomOf="@+id/image_release_movie"
+            app:srcCompat="@drawable/ic_clock_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_movie_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/color_grey_dark"
+            app:layout_constraintBottom_toBottomOf="@id/image_movie_length"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_movie_length"
+            app:layout_constraintTop_toTopOf="@id/image_movie_length"
+            tools:text="146 phút" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_movie_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/image_movie_length"
+            app:layout_constraintTop_toBottomOf="@+id/image_movie_length"
+            app:srcCompat="@drawable/ic_movie_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_movie_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/color_grey_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_movie_category"
+            app:layout_constraintTop_toTopOf="@id/image_movie_category"
+            tools:text="146 phút" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
